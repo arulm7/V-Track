@@ -21,7 +21,7 @@ import com.app.v_fit.ui.theme.Blue1
 import com.app.v_fit.ui.theme.GrayColor
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(onNext: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -63,7 +63,7 @@ fun WelcomeScreen() {
             ButtonComponent(
                 value = "Get Started",
                 onButtonClicked = {
-                    // Navigate to Onboarding
+                    onNext()
                 }
             )
         }
